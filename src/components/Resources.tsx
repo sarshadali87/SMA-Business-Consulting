@@ -5,7 +5,7 @@ export default function Resources() {
     {
       title: '5 Tax Changes for 2025 Every Business Owner Must Know',
       category: 'Compliance',
-      date: 'March 15, 2025',
+      date: 'October 10, 2025',
       readTime: '5 min read',
       image: 'https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&w=800',
       excerpt: 'Stay ahead of the curve with our comprehensive guide to the latest tax regulations affecting SMEs.'
@@ -13,7 +13,7 @@ export default function Resources() {
     {
       title: 'How AI is Reshaping Social Media Marketing in 2025',
       category: 'Marketing',
-      date: 'March 12, 2025',
+      date: 'October 10, 2025',
       readTime: '7 min read',
       image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
       excerpt: 'Discover how artificial intelligence is revolutionizing content strategy, targeting, and engagement.'
@@ -21,7 +21,7 @@ export default function Resources() {
     {
       title: 'The ROI of Custom AI Chatbots: A Data-Driven Analysis',
       category: 'AI & Technology',
-      date: 'March 8, 2025',
+      date: 'October 10, 2025',
       readTime: '6 min read',
       image: 'https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=800',
       excerpt: 'Real numbers from real businesses showing how AI chatbots deliver measurable returns on investment.'
@@ -34,7 +34,7 @@ export default function Resources() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full mb-4">
             <BookOpen className="text-blue-600" size={18} />
-            <span className="text-sm font-medium text-blue-600">Resources & Insights</span>
+            <span className="text-sm font-medium text-blue-600"><b>Resources & Insights</b></span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Stay Informed, Stay Ahead
@@ -44,7 +44,7 @@ export default function Resources() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-0">
           {articles.map((article, index) => (
             <div
               key={index}
@@ -83,14 +83,14 @@ export default function Resources() {
 
                 <button className="group/btn flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700">
                   <span>Read More</span>
-                  <ArrowRight className="group-hover/btn:translate-x-1 transition-transform" size={18} />
+                  <ArrowRight className="group-hover/btn:translate-x-1 transition-transform" size={15} />
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-blue-600 to-teal-500 rounded-3xl p-12 text-center">
+        {/* <div className="bg-gradient-to-r from-blue-600 to-teal-500 rounded-3xl p-12 text-center">
           <div className="max-w-3xl mx-auto">
             <TrendingUp className="w-16 h-16 text-white mx-auto mb-6" />
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -115,7 +115,7 @@ export default function Resources() {
               Join 10,000+ business owners growing smarter every week
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

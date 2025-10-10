@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ExternalLink, TrendingUp, Palette, Bot, Award } from 'lucide-react';
 
+
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('all');
 
@@ -16,11 +17,11 @@ export default function Portfolio() {
     {
       id: 1,
       category: 'tax',
-      title: 'Taxation Compliance',
+      title: 'Taxation Compliances',
       client: 'Sadiq Trading',
-      description: 'Increased revenue by 340% through data-driven marketing strategies and AI analytics.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: ['340% ROAS', '2M+ Reach', '85% Engagement'],
+      description: 'Signifies timely, accurate tax filings and full adherence to legal requirements.',
+      image: 'https://images.pexels.com/photos/4427422/pexels-photo-4427422.jpeg',
+      metrics: ['340% ROAS', '2K+ Reach', '85% Engagement'],
       icon: TrendingUp
     },
     {
@@ -28,9 +29,9 @@ export default function Portfolio() {
       category: 'marketing',
       title: 'E-Commerce Growth Campaign',
       client: 'ShopTech Solutions',
-      description: 'Increased revenue by 340% through data-driven marketing strategies and AI analytics.',
+      description: 'Increased revenue by 200% through data-driven marketing strategies and AI analytics.',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: ['340% ROAS', '2M+ Reach', '85% Engagement'],
+      metrics: ['200% ROAS', '2K+ Reach', '85% Engagement'],
       icon: TrendingUp
     },
     {
@@ -59,8 +60,8 @@ export default function Portfolio() {
       title: 'Social Media Domination',
       client: 'StyleVerse Fashion',
       description: 'Multi-platform campaign achieving viral growth and establishing brand authority.',
-      image: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: ['500K+ Followers', '5M Impressions', '12% CTR'],
+      image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg',
+      metrics: ['5K+ Followers', '50K Impressions', '12% CTR'],
       icon: TrendingUp
     },
     {
@@ -68,9 +69,9 @@ export default function Portfolio() {
       category: 'design',
       title: 'Professional Presentation Suite',
       client: 'TechVentures Inc.',
-      description: 'Investor pitch decks and corporate presentations that secured $2M in funding.',
+      description: 'Investor pitch decks and corporate presentations that secured 200K in funding.',
       image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
-      metrics: ['$2M Funded', '20+ Decks', 'Award-Winning'],
+      metrics: ['200K Funded', '20+ Decks', 'Award-Winning'],
       icon: Award
     },
     {
@@ -105,10 +106,10 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-7">
           <div className="inline-flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full mb-4">
-            <Award className="text-blue-600" size={18} />
-            <span className="text-sm font-medium text-blue-600">Our Work</span>
+            <Award className="text-blue-600" size={50} />
+            <span className="text-sm font-medium text-blue-600"><b>Our Work</b></span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Success Stories & Case Studies
@@ -123,11 +124,10 @@ export default function Portfolio() {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                activeCategory === category.id
+              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeCategory === category.id
                   ? 'bg-gradient-to-r from-blue-600 to-teal-500 text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+                }`}
             >
               {category.name}
             </button>
