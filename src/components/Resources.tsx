@@ -29,9 +29,9 @@ export default function Resources() {
   ];
 
   return (
-    <section id="resources" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="resources" className="py-7 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <div className="inline-flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full mb-4">
             <BookOpen className="text-blue-600" size={18} />
             <span className="text-sm font-medium text-blue-600"><b>Resources & Insights</b></span>

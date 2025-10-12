@@ -10,14 +10,14 @@ export default function Testimonials() {
       role: 'CEO, TechStart Inc.',
       image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
-      text: 'SMA Consulting transformed our compliance processes completely. What used to take weeks now happens seamlessly. Their AI chatbot has saved us thousands in support costs while improving customer satisfaction.'
+      text: 'SMA Business Consulting transformed our compliance processes completely. What used to take weeks now happens seamlessly. Their AI chatbot has saved us thousands in support costs while improving customer satisfaction.'
     },
     {
       name: 'Michael Chen',
       role: 'Founder, GrowthHub',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
-      text: 'The digital marketing strategies from SMA are incredible. Our ROAS improved by 340% in just 3 months. Their AI-driven analytics helped us understand our audience better than ever before.'
+      text: 'The digital marketing strategies from SMA Business Consulting are incredible. Our ROAS improved by 340% in just 3 months. Their AI-driven analytics helped us understand our audience better than ever before.'
     },
     {
       name: 'Emily Rodriguez',
@@ -67,24 +67,24 @@ export default function Testimonials() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 to-blue-900">
+    <section className="py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 to-blue-900">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-3">
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
             <Star className="text-yellow-400" size={18} />
-            <span className="text-sm font-medium text-white">Client Success Stories</span>
+            <span className="text-sm font-medium text-white"><b>Client Success Stories</b></span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            Don't just take our word for it. See what our clients have to say about working with SMA Consulting.
+            Don't just take our word for it. See what our clients have to say about working with SMA Business Consulting.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-12">
-            <Quote className="text-blue-200 mb-6" size={48} />
+          <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-4">
+            <Quote className="text-blue-300 mb-6" size={30} />
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 sm:space-x-6 mb-8">
               <img
@@ -140,17 +140,17 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-8 mt-16">
+        <div className="grid sm:grid-cols-3 gap-8 mt-4">
           <div className="text-center">
-            <div className="text-5xl font-bold text-white mb-2">500+</div>
+            <div className="text-5xl font-bold text-white mb-2">50+</div>
             <div className="text-blue-200">Projects Completed</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold text-white mb-2">98%</div>
+            <div className="text-5xl font-bold text-white mb-2">90%</div>
             <div className="text-blue-200">Client Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold text-white mb-2">50+</div>
+            <div className="text-5xl font-bold text-white mb-2">5+</div>
             <div className="text-blue-200">Industry Awards</div>
           </div>
         </div>

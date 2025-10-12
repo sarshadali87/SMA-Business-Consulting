@@ -8,7 +8,7 @@ export default function Services({ onBookConsultation }: ServicesProps) {
   const services = [
     {
       icon: Shield,
-      title: 'Compliance & Finance Solutions',
+      title: 'Taxation & Corporate Compliance Solutions',
       tagline: 'Mitigate Risk. Ensure Compliance. Focus on Growth.',
       description: 'Navigate complex taxation and corporate compliance with confidence. Our experts simplify registrations, filings, and regulatory requirements.',
       color: 'blue',
@@ -98,8 +98,8 @@ export default function Services({ onBookConsultation }: ServicesProps) {
   return (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full mb-4">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full mb-2">
             <BarChart className="text-blue-600" size={18} />
             <span className="text-sm font-medium text-blue-600">Our Services</span>
           </div>
@@ -126,10 +126,10 @@ export default function Services({ onBookConsultation }: ServicesProps) {
                 </div>
 
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                <p className={`${colors.text} font-semibold mb-4 text-lg`}>{service.tagline}</p>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <p className={`${colors.text} font-semibold mb-2 text-lg`}>{service.tagline}</p>
+                <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
 
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-6">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start space-x-3">
                       <div className={`w-5 h-5 rounded-full bg-gradient-to-br ${colors.bg} flex items-center justify-center flex-shrink-0 mt-0.5`}>
@@ -151,7 +151,7 @@ export default function Services({ onBookConsultation }: ServicesProps) {
           })}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-slate-900 to-blue-900 rounded-3xl p-12 text-center">
+        <div className="mt-10 bg-gradient-to-r from-slate-900 to-blue-900 rounded-3xl p-12 text-center">
           <h3 className="text-3xl font-bold text-white mb-4">
             Need a Custom Package?
           </h3>
@@ -160,7 +160,7 @@ export default function Services({ onBookConsultation }: ServicesProps) {
           </p>
           <button
             onClick={onBookConsultation}
-            className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            className="bg-white text-blue-900 px-8 py-2 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             Discuss Custom Solutions
           </button>
