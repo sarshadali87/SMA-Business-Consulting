@@ -1,0 +1,14 @@
+import express from 'express';
+const app = express();
+app.use(express.json());
+
+app.post('/whatsapp', (req, res) => {
+  console.log('Incoming WhatsApp webhook:', req.body);
+
+  // ✅ Handle the incoming message or status update
+  // Example: forward to Flowise or reply using Twilio API
+
+  res.sendStatus(200); // Acknowledge receipt
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));

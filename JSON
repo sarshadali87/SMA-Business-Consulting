@@ -1,0 +1,58 @@
+{
+  "name": "Restaurant Order Chatbot",
+  "nodes": [
+    {
+      "id": "1",
+      "label": "User Input",
+      "type": "inputText",
+      "data": { "name": "user_input" }
+    },
+    {
+      "id": "2",
+      "label": "Prompt Template",
+      "type": "promptTemplate",
+      "data": {
+        "template": "You are a helpful restaurant assistant. Respond naturally to greetings, menu, or price questions. If the user wants to place an order, return JSON in this format:\n{\n\"intent\": \"create_order\",\n\"items\": [{\"name\": \"burger\", \"quantity\": 2, \"price\": 5.99}],\n\"total_price\": 11.98,\n\"delivery_method\": \"pickup | delivery | dine-in\",\n\"location\": \"customer address or branch\",\n\"confirmation\": \"Ask if order should be confirmed\"\n}\n\nUser Message: {{question}}",
+        "inputVariables": ["question"]
+      },
+      "inputs": { "question": "1" }
+    },
+    {
+      "id": "3",
+      "label": "LLM Node",
+      "type": "llm",
+      "data": {
+        "model": "gpt-4o-mini",
+        "temperature": 0.2
+      },
+      "inputs": { "prompt": "2" }
+    },
+    {
+      "id": "4",
+      "label": "HTTP POST (Send Order)",
+      "type": "httpRequest",
+      "data": {
+        "url": "http://localhost:5000/api/orders",
+        "method": "POST",
+        "headers": { "Content-Type": "application/json" },
+        "body": "{{output}}"
+      },
+      "inputs": { "output": "3" }
+    },
+    {
+      "id": "5",
+      "label": "Response to User",
+      "type": "outputText",
+      "data": {
+        "name": "order_response"
+      },
+      "inputs": { "text": "4" }
+    }
+  ],
+  "edges": [
+    { "source": "1", "target": "2" },
+    { "source": "2", "target": "3" },
+    { "source": "3", "target": "4" },
+    { "source": "4", "target": "5" }
+  ]
+}
